@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="decision" type="decision_node" name="decision_node"/>
+
+</launch>
