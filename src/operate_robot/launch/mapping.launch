@@ -1,6 +1,6 @@
 
 <launch>
-  <arg name="mapping_mode"  default="hector" doc="opt: gmapping,hector,cartographer,karto"/>
+  <arg name="mapping_mode"  default="gmapping" doc="opt: gmapping,hector,cartographer,karto"/>
   <!--因为机器人模型会发布一个base_footprint,而robot_pose_ekf也会发布一个-->
   <!-- <param name="/robot_name/base_footprint" value="base_footprint"/> -->
 
@@ -10,10 +10,10 @@
   <arg name="odom_frame_id"  default="odom"/>
 
   <!-- 开启仿真环境  -->
-  <include file="$(find ua_simulator)/launch/uc_simulation_start.launch" >
-    <arg name="x_pos" default="7.5"/>
-    <arg name="y_pos" default="4"/>
-    <arg name="z_pos" default="0.1"/>
+  <include file="$(find ua_simulator)/launch/ua_simulation_start.launch" >
+    <arg name="x_pos" default="0"/>
+    <arg name="y_pos" default="0"/>
+    <arg name="z_pos" default="0"/>
   </include>
 
   <!-- 启动APP一键保存地图功能  -->
