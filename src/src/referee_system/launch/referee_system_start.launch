@@ -1,6 +1,0 @@
-<launch>
-    <node pkg="referee_system" type="manual_input_node" name="manu_input_node" output="screen"/>
-    <node pkg="referee_system" type="referee_system_node" name="referee_system_node"/>
-    <!--开启机器人决策-->
-    <include file="$(find decision)/launch/decision.launch"/>
-</launch>
