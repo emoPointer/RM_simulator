@@ -215,3 +215,8 @@ int main(int argc, char **argv)
 	return 0;
 }
 ```
+### Build Crashed
+如果编译出现问题，需要在终端中输入(包含)：
+```bash
+g++ poco_server.cpp -o poco_server -I ../poco/Net/include  -I ../poco/Foundation/include -I ../poco/JSON/include -L ../poco/cmake-build/lib -lPocoNet -lPocoUtil -lPocoFoundation -lPocoJSON -pthread
+```
